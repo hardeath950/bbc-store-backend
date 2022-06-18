@@ -3,7 +3,7 @@ services:
   strapi:
     container_name: strapi
     build: .
-    image: mystrapi:latest
+    image: bbc-store-backend:latest
     restart: unless-stopped
     env_file: .env
     environment:
@@ -40,11 +40,15 @@ services:
       POSTGRES_PASSWORD: ${DATABASE_PASSWORD}
       POSTGRES_DB: ${DATABASE_NAME}
     volumes:
-      - ../pgdata:/var/lib/postgresql/data/
+      - pg-data:/var/lib/postgresql/data/ #using a volume
+      # - ../pgdata:/var/lib/postgresql/data/ #using a relative path
     ports:
       - "5432:5432"
     networks:
       - strapi
+
+volumes:
+    pg-data:
 
 networks:
   strapi:
