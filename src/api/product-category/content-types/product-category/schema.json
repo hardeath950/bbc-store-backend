@@ -4,7 +4,8 @@
   "info": {
     "singularName": "product-category",
     "pluralName": "product-categories",
-    "displayName": " Product Categories"
+    "displayName": " Product Categories",
+    "description": ""
   },
   "options": {
     "draftAndPublish": false
@@ -21,11 +22,22 @@
       "type": "richtext"
     },
     "images": {
+      "type": "media",
+      "multiple": true,
+      "required": false,
       "allowedTypes": [
         "images"
-      ],
-      "type": "media",
-      "multiple": true
+      ]
+    },
+    "store": {
+      "type": "relation",
+      "relation": "oneToOne",
+      "target": "api::store.store"
+    },
+    "sub_categories": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::product-category.product-category"
     }
   }
 }

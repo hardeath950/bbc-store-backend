@@ -14,7 +14,8 @@
     "@strapi/plugin-i18n": "4.3.0-beta.1",
     "@strapi/plugin-users-permissions": "4.3.0-beta.1",
     "@strapi/strapi": "4.3.0-beta.1",
-    "pg": "8.6.0"
+    "pg": "8.6.0",
+    "strapi-plugin-io": "^1.1.1"
   },
   "author": {
     "name": "A Strapi developer"
