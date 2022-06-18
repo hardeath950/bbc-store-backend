@@ -37,7 +37,7 @@
     "cost_price": {
       "type": "decimal"
     },
-    "sale_prive": {
+    "sale_price": {
       "type": "decimal"
     },
     "status": {
